@@ -1,14 +1,30 @@
 package com.tothenew.beach.springbootmongodb.model;
 
+/*
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
+import lombok.Setter;
+import lombok.Getter;
+*/
+
 import org.springframework.data.mongodb.core.mapping.Document;
 
+
+/*
+@NoArgsConstructor
+@AllArgsConstructor
+@Setter
+@Getter
+*/
 @Document(collection = "students")
 public class Student {
-
     private int id;
     private String name;
     private String college;
     private String city;
+
+    public Student() {
+    }
 
     public Student(int id, String name, String college, String city) {
         this.id = id;
